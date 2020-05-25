@@ -65,25 +65,36 @@ def getCutLists(inputstr = "", outputstr = ""):
         cutwidth = data['Cut loss']
     except:
         errstr += "'Cut loss' not found. "
+        
+    if errstr:
+        return(f"Err: {errstr}")
     
     #Test for required keys in array
     try:
         test = [x['Length'] for x in reqs]
+        if min(test) <= 0:
+            errstr += f"Err: Required length ({min(test)}) must be bigger than 0."
     except:
         errstr += "'Length' not found in required lengths. "
 
     try:
         test = [x['Qty'] for x in reqs]
+        if min(test) <= 0:
+            errstr += f"Err: Required quantity ({min(test)}) must be bigger than 0."
     except:
         errstr += "'Qty' not found in required lengths. "
         
     try:
         test = [x['Length'] for x in avail]
+        if min(test) <= 0:
+            errstr += f"Err: Available length ({min(test)}) must be bigger than 0."
     except:
         errstr += "'Length' not found in available base material. "
     
     try:
         test = [x['Price'] for x in avail]
+        if min(test) < 0:
+            errstr += f"Err: Available price ({min(test)}) can't be negative."
     except:
         errstr += "'Price' not found in available base material. "
         
@@ -93,8 +104,16 @@ def getCutLists(inputstr = "", outputstr = ""):
     
     #Init other vars
     listreq = [x['Length'] for x in reqs]
+    listavail = [x['Length'] for x in avail]
     minreq = min(listreq)
     res=[]
+
+    #Error handling on passed inputs
+    if max(listreq) > max(listavail):
+        return(f"Err: Unable to process, required length of {max(listreq)} is bigger than longest available base material with length of {max(listavail)}.")
+    
+    if cutwidth < 0:
+        return(f"Err: Cut width can't be negative")
 
     #Make list of all available cut combinations
     combs = []
