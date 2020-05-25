@@ -1,0 +1,32 @@
+{
+    "Cut loss": 3,
+    "Required Lengths": [
+        {
+            "Length": 58,
+            "Qty": 18
+        },
+        {
+            "Length": 80,
+            "Qty": 16
+        },
+        {
+            "Length": 87,
+            "Qty": 16
+        }
+    ],
+
+    "Available base material": [
+        {
+            "Length": 300,
+            "Price": 5.95
+        },
+        {
+            "Length": 180,
+            "Price": 2.95
+        },
+        {
+            "Length": 360,
+            "Price": 6.95
+        }
+    ]
+}

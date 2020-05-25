@@ -1,0 +1,32 @@
+{
+    "Required base material": {
+        "180": 22
+    },
+    "Cut list": [
+        "Plank 1: Length 180, 3x 58, rest: 0",
+        "Plank 2: Length 180, 3x 58, rest: 0",
+        "Plank 3: Length 180, 3x 58, rest: 0",
+        "Plank 4: Length 180, 3x 58, rest: 0",
+        "Plank 5: Length 180, 3x 58, rest: 0",
+        "Plank 6: Length 180, 3x 58, rest: 0",
+        "Plank 7: Length 180, 2x 87, rest: 3",
+        "Plank 8: Length 180, 2x 87, rest: 3",
+        "Plank 9: Length 180, 2x 87, rest: 3",
+        "Plank 10: Length 180, 2x 87, rest: 3",
+        "Plank 11: Length 180, 2x 87, rest: 3",
+        "Plank 12: Length 180, 2x 87, rest: 3",
+        "Plank 13: Length 180, 2x 87, rest: 3",
+        "Plank 14: Length 180, 2x 87, rest: 3",
+        "Plank 15: Length 180, 2x 80, rest: 17",
+        "Plank 16: Length 180, 2x 80, rest: 17",
+        "Plank 17: Length 180, 2x 80, rest: 17",
+        "Plank 18: Length 180, 2x 80, rest: 17",
+        "Plank 19: Length 180, 2x 80, rest: 17",
+        "Plank 20: Length 180, 2x 80, rest: 17",
+        "Plank 21: Length 180, 2x 80, rest: 17",
+        "Plank 22: Length 180, 2x 80, rest: 17"
+    ],
+    "Total price": [
+        64.9
+    ]
+}
