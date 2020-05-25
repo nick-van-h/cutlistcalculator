@@ -1,10 +1,17 @@
 # Cutlist Calculator
 Calculates most optimal cutlist for linear length materials such as beams/planks.
 
-## Example
+## Project summary
+![Language](https://img.shields.io/badge/language-python%203.8-blue)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/nvh1989/cutlistcalculator)
+![GitHub issues](https://img.shields.io/github/issues/nvh1989/cutlistcalculator)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/nvh1989/cutlistcalculator)
+![GitHub](https://img.shields.io/github/license/nvh1989/cutlistcalculator)
 
-### Problem statement
-Given available plank length of 100 (@ 2.5 each) and 180 (@ 4 each), and required plank lengths of 60 (4x) and 90 (6x), possible cuts are:
+## Problem statement and calculation
+Given available plank length of 100 (@ 2.5 each) and 180 (@ 4 each), and required plank lengths of 60 (4x) and 90 (6x), what is the most economic solution to obtain required plank lengths?
+
+Possible cuts include:
 - 180 plank cut to 2x 90
 - 180 plank cut to 1x 90 & 1x 60
 - 180 plank cut to 3x 60
@@ -18,16 +25,12 @@ Possible solutions include:
 - 6x 120 plank cut to 1x 90 (@ 6x 4 = 24) + 2x 120 plank cut to 2x 60 (@ 2x 2.5 = 5) -> Total price 29
 - And everything in between
 
-What is the most optimal combination?
+To calculate optimal cutlist following methods are used:
+- Minimize waste: Sort list of possible cuts by smallest rest length
+- Big lengths first: Sort list of possible cuts by biggest required lengths first
+- Minimum price per used length: Sort list of possible cuts by cost price per unit based on actual used length
 
-### Aglorithm
-
-There are three ways to calculate cutlist:
-- Minimize waste: Sort possible list by rest length
-- Big lengths first: Sort by biggest required length
-- Minimum price per used length: Sort by cost price per unit based on actual used length
-
-This program returns the cheapest option available.
+Results of these methods are compared and cheapest option is returned.
 
 ## Usage
 The program reads an input JSON file with the required lengths + quantities and available base material + unit price, calculates the most cost efficient cutlist and outputs to another JSON file. 
