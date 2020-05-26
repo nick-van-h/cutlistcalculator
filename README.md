@@ -3,10 +3,10 @@ Calculates most optimal cutlist for linear length materials such as beams/planks
 
 ## Project summary
 ![Language](https://img.shields.io/badge/language-python%203.8-blue)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/nvh1989/cutlistcalculator)
-![GitHub issues](https://img.shields.io/github/issues/nvh1989/cutlistcalculator)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/nvh1989/cutlistcalculator)
-![GitHub](https://img.shields.io/github/license/nvh1989/cutlistcalculator)
+![GitHub release](https://img.shields.io/github/v/release/nick-van-h/cutlistcalculator)
+![GitHub issues](https://img.shields.io/github/issues/nick-van-h/cutlistcalculator)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/nick-van-h/cutlistcalculator)
+![GitHub license](https://img.shields.io/github/license/nick-van-h/cutlistcalculator)
 
 ## Problem statement and calculation
 Given available plank length of 100 (@ 2.5 each) and 180 (@ 4 each), and required plank lengths of 60 (4x) and 90 (6x), what is the most economic solution to obtain required plank lengths?
